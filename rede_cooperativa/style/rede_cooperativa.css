@@ -1,0 +1,310 @@
+/* =========================================================================
+   ESTILO GLOBAL DA REDE COOPERATIVA - SMARTGEST
+   ========================================================================= */
+
+:root {
+    --primary-blue: #1e3a8a;       /* Azul Escuro Dominante */
+    --accent-blue: #2563eb;        /* Azul Vivo para Destaques */
+    --light-blue: #eff6ff;         /* Fundo Azul Suave */
+    --text-main: #1e293b;          /* Cinza Escuro Profissional */
+    --text-muted: #64748b;         /* Cinza para Descrições */
+    --bg-page: #f8fafc;            /* Fundo ultra limpo */
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+/* --- HEADER SUPERIOR --- */
+.rede-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn-voltar {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-voltar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-2px);
+}
+
+.header-left h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* PERFIL DE UTILIZADOR */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background-color: var(--accent-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 2px solid var(--white);
+}
+
+#user-display-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* --- CONTAINER E INTRO --- */
+.rede-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.rede-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rede-intro h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.rede-intro p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- GRID DE CARDS --- */
+.rede-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+/* CARD PADRÃO */
+.rede-card {
+    background-color: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.006);
+}
+
+.rede-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -3px rgba(30, 58, 138, 0.08);
+    border-color: #cbd5e1;
+}
+
+.card-icon {
+    width: 54px;
+    height: 54px;
+    background-color: var(--light-blue);
+    color: var(--accent-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.rede-card:hover .card-icon {
+    background-color: var(--accent-blue);
+    color: var(--white);
+}
+
+.rede-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--primary-blue);
+}
+
+.rede-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: auto;
+}
+
+.card-link {
+    margin-top: 24px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.rede-card:hover .card-link {
+    gap: 10px;
+}
+
+/* CARD DESTAQUE - KIXIQUILA (LIMPO E SEM A ESCRITA EM ::BEFORE) */
+.rede-card.highlighted {
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+    border: 2px solid var(--accent-blue);
+}
+
+.rede-card.highlighted .card-icon {
+    background-color: var(--accent-blue);
+    color: var(--white);
+}
+
+/* --- ANIMAÇÃO DE ENTRADA --- */
+.animacao-entrada {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================================
+   RESPONSIVIDADE HORIZONTAL COMPACTA PARA MOBILE (MÁXIMO 768px)
+   ========================================================================= */
+
+@media (max-width: 768px) {
+    /* Mantém o cabeçalho compacto na horizontal para poupar ecrã */
+    .rede-header {
+        padding: 12px 16px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .header-left {
+        gap: 12px;
+        flex-direction: row;
+    }
+
+    .btn-voltar {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
+    .header-left h1 {
+        font-size: 1.1rem;
+    }
+
+    .user-profile {
+        padding: 4px 8px;
+        gap: 6px;
+    }
+
+    /* Oculta o nome do utilizador focando apenas no círculo do avatar */
+    #user-display-name {
+        display: none;
+    }
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .rede-container {
+        margin: 20px auto;
+    }
+
+    .rede-intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .rede-intro p {
+        font-size: 0.95rem;
+    }
+
+    /* Ajuste estrutural do Grid para dispositivos móveis */
+    .rede-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .rede-card {
+        padding: 24px;
+    }
+}
+
+/* Ajuste extra para ecrãs ultra pequenos (MÁXIMO 380px) */
+@media (max-width: 380px) {
+    .btn-voltar {
+        padding: 6px 8px;
+    }
+}
