@@ -1,6 +1,4 @@
-/* ==========================================================================
-   ESTRUTURA GERAL DA LANDING PAGE
-   ========================================================================== */
+/*ESTRUTURA GERAL DA LANDING PAGE*/
 body {
     background-color: #f8fafc;
     margin: 0;
@@ -11,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Reutilização da tua animação original de entrada suave */
+/*entrada suave */
 .landing-page {
     animation: fadeIn 0.9s ease-out;
 }
@@ -27,9 +25,7 @@ body {
     }
 }
 
-/* ==========================================================================
-   BARRA DE NAVEGAÇÃO SUPERIOR
-   ========================================================================== */
+/*BARRA DE NAVEGAÇÃO SUPERIOR*/
 .main-navbar {
     background-color: #2563eb; /* Azul vivo e corporativo */
     padding: 15px 30px;
@@ -103,9 +99,7 @@ body {
     box-shadow: 0 6px 12px rgba(255, 87, 34, 0.3);
 }
 
-/* ==========================================================================
-   SECÇÃO HERO (Apresentação Principal)
-   ========================================================================== */
+/*SECÇÃO HERO (Apresentação Principal*/
 .hero-section {
     background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
     color: #ffffff;
@@ -226,9 +220,7 @@ body {
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* ==========================================================================
-   SECÇÃO DE RECURSOS (Grelha de Funcionalidades)
-   ========================================================================== */
+/*SECÇÃO DE RECURSOS (Grelha de Funcionalidades)*/
 .features-section {
     max-width: 1200px;
     margin: 100px auto;
@@ -265,7 +257,7 @@ body {
     border-radius: 12px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
@@ -293,9 +285,7 @@ body {
     margin: 0;
 }
 
-/* ==========================================================================
-   SECÇÃO CONTEXTO LOCAL (Espaço para Fotos de Angola)
-   ========================================================================== */
+/*SECÇÃO CONTEXTO LOCAL*/
 .local-context-section {
     background-color: #f1f5f9;
     padding: 80px 20px;
@@ -313,6 +303,7 @@ body {
 .local-image-box, .local-text-box {
     flex: 1;
     min-width: 320px;
+    
 }
 
 .local-img {
@@ -321,6 +312,12 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
     object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.local-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 14px rgba(0, 0, 0, 0.336);
 }
 
 .local-text-box h2 {
@@ -337,9 +334,7 @@ body {
     margin: 0;
 }
 
-/* ==========================================================================
-   ABA DOS DESENVOLVEDORES (Cards de Equipa Modernos)
-   ========================================================================== */
+/*ABA DOS DESENVOLVEDORES (Cards de Equipa Modernos)*/
 .team-section {
     max-width: 1200px;
     margin: 100px auto;
@@ -409,9 +404,7 @@ body {
     color: #2563eb;
 }
 
-/* ==========================================================================
-   RODAPÉ DA PÁGINA (Footer)
-   ========================================================================== */
+/*Footer)*/
 .main-footer {
     background-color: #0f172a;
     color: #94a3b8;
@@ -429,35 +422,7 @@ body {
     color: #ffffff;
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE (Ajustes para Telemóveis)
-   ========================================================================== */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Oculta o menu central em telemóveis para evitar quebras */
-    }
-    
-    .hero-section {
-        padding: 60px 20px;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 2.4rem;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .features-section, .team-section {
-        margin: 60px auto;
-    }
-}
-
-/* ==========================================================================
-   SECÇÃO DE SUPORTE
-   ========================================================================== */
+/*SECÇÃO DE SUPORTE*/
 .support-section {
     max-width: 1200px;
     margin: 100px auto;
@@ -651,3 +616,28 @@ body {
     opacity: 1;
     transform: translateY(0); /* Volta à posição original */
 }
+
+/*RESPONSIVIDADE*/
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Oculta o menu central em telemóveis para evitar quebras */
+    }
+    
+    .hero-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .features-section, .team-section {
+        margin: 60px auto;
+    }
+}
+
